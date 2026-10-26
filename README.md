@@ -2,15 +2,15 @@
 
 > **"성실한 자세로 팀원과 긴밀히 협력하고, 철저한 계획으로 변수를 최소화하여 문제를 끝까지 해결합니다."**
 
-[![Portfolio Status](https://img.shields.io/badge/Status-Live_Available-success?style=for-the-badge&logo=googlechrome&logoColor=white)](https://gsg920.github.io/portfolio/)
-[![Major](https://img.shields.io/badge/Major-Semiconductor_Systems_Engineering-blue?style=for-the-badge)](https://gsg920.github.io/portfolio/)
+[![Portfolio Status](https://img.shields.io/badge/Status-Live_Available-success?style=for-the-badge&logo=googlechrome&logoColor=white)](https://dydtjr2626.github.io/yongsoek.index.html/)
+[![Major](https://img.shields.io/badge/Major-Semiconductor_Systems_Engineering-blue?style=for-the-badge)](https://dydtjr2626.github.io/yongsoek.index.html/)
 [![License](https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge)](#)
 
 ---
 
 ## 🌐 포트폴리오 웹사이트 바로가기 (Live Preview)
 
-👉 **웹사이트 링크**: [https://gsg920.github.io/portfolio/](https://gsg920.github.io/portfolio/)  
+👉 **웹사이트 링크**: [https://dydtjr2626.github.io/yongsoek.index.html/](https://dydtjr2626.github.io/yongsoek.index.html/)  
 *(또는 로컬 실행 시 [http://localhost:3000](http://localhost:3000))*
 
 ---
