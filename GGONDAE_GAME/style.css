@@ -1,0 +1,126 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg-color: #f8fbff;
+  --card-bg: #ffffff;
+  --primary-blue: #3b82f6;
+  --text-main: #111827;
+  --text-sub: #6b7280;
+  --border-color: #e5e7eb;
+  --disabled-bg: #e5e7eb;
+  --kkoondae-red: #f43f5e;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+.container {
+  background: #fff;
+  border-radius: 32px;
+  max-width: 480px;
+  width: 100%;
+  min-height: 700px;
+  padding: 40px 24px;
+  box-shadow: 0 10px 40px rgba(59, 130, 246, 0.08);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.screen { display: flex; flex-direction: column; height: 100%; width: 100%; }
+.hidden { display: none !important; }
+
+/* 상단 진행 바 */
+.top-bar { display: flex; align-items: center; margin-bottom: 32px; }
+.progress-bar { flex: 1; height: 6px; background: var(--border-color); border-radius: 10px; overflow: hidden; }
+.progress-fill { height: 100%; background: var(--primary-blue); width: 0%; transition: width 0.3s ease; }
+
+/* 시작 화면 */
+.hero { text-align: center; margin-bottom: 32px; }
+.hero h1 { font-size: 1.8rem; font-weight: 800; color: var(--text-main); margin-bottom: 12px; line-height: 1.3; }
+.hero .subtitle { font-size: 1rem; color: var(--text-sub); margin-bottom: 24px; line-height: 1.5; }
+.hero .warning {
+  display: inline-block;
+  background: #eff6ff;
+  color: var(--primary-blue);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* 모드 선택 카드 */
+.mode-list { display: flex; flex-direction: column; gap: 14px; margin-top: 8px; }
+.mode-card {
+  display: flex; align-items: center; gap: 16px; width: 100%; padding: 20px;
+  background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 20px;
+  cursor: pointer; text-align: left; transition: all 0.2s ease; font-family: inherit;
+}
+.mode-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(59, 130, 246, 0.12); }
+.mode-young:hover  { border-color: var(--primary-blue); }
+.mode-kkoondae:hover { border-color: var(--kkoondae-red); }
+.mode-both:hover   { border-color: #8b5cf6; }
+
+.mode-emoji { font-size: 2rem; flex-shrink: 0; }
+.mode-info { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.mode-name { font-size: 1.05rem; font-weight: 700; color: var(--text-main); }
+.mode-desc { font-size: 0.85rem; color: var(--text-sub); }
+.mode-arrow { font-size: 1.6rem; color: var(--text-sub); font-weight: 300; }
+
+/* 공통 버튼 */
+.bottom-btn-area { margin-top: auto; padding-top: 24px; }
+.btn {
+  width: 100%; background: var(--primary-blue); color: #fff; border: none;
+  padding: 18px; border-radius: 16px; font-size: 1.05rem; font-weight: 600;
+  cursor: pointer; transition: background 0.2s; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); font-family: inherit;
+}
+.btn:hover { background: #2563eb; }
+.btn:disabled { background: var(--disabled-bg); cursor: not-allowed; box-shadow: none; }
+.btn.secondary { background: #f1f5f9; color: var(--text-main); margin-bottom: 12px; box-shadow: none; }
+.btn.secondary:hover { background: #e2e8f0; }
+
+/* 퀴즈 화면 */
+.q-counter { font-size: 0.9rem; color: var(--primary-blue); font-weight: 700; margin-bottom: 8px; }
+.question { font-size: 1.4rem; font-weight: 700; line-height: 1.4; margin-bottom: 32px; color: var(--text-main); }
+.answers { display: flex; flex-direction: column; gap: 12px; }
+.answer {
+  background: var(--card-bg); border: 2px solid var(--border-color); padding: 18px 20px;
+  border-radius: 16px; cursor: pointer; font-size: 1rem; font-weight: 500;
+  transition: all 0.2s; text-align: left; color: var(--text-main); font-family: inherit;
+}
+.answer:hover { border-color: var(--primary-blue); background: #f8fbff; }
+.answer.selected { background: #eff6ff; border-color: var(--primary-blue); color: var(--primary-blue); font-weight: 700; }
+
+/* 결과 화면 */
+.result-title { text-align: center; font-size: 1.6rem; font-weight: 800; color: var(--text-main); margin-bottom: 6px; }
+.result-type { text-align: center; font-size: 1rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 24px; }
+.character-img { width: 180px; height: 180px; object-fit: contain; display: block; margin: 0 auto 24px auto; }
+
+.score-card { background: #f8fbff; border: 1px solid #eff6ff; border-radius: 20px; padding: 20px; margin-bottom: 12px; }
+.score-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.score-label { font-weight: 700; font-size: 1rem; color: var(--text-main); }
+.score-value { font-size: 1.4rem; font-weight: 800; color: var(--primary-blue); }
+.score-track { width: 100%; height: 12px; background: #e2e8f0; border-radius: 10px; overflow: hidden; }
+.score-fill { height: 100%; border-radius: 10px; width: 0%; transition: width 1s ease; }
+.young-fill { background: var(--primary-blue); }
+.kkoondae-fill { background: var(--kkoondae-red); }
+
+/* 상세 정보 텍스트 박스 */
+.desc-box { background: #fff; border: 1px solid var(--border-color); border-radius: 20px; padding: 24px; margin: 20px 0; line-height: 1.6; font-size: 0.95rem; color: var(--text-sub); }
+.desc-box strong { color: var(--text-main); }
+
+.info-section { margin-bottom: 24px; }
+.info-section:last-child { margin-bottom: 0; }
+.info-title { font-size: 1.05rem; font-weight: 800; color: var(--text-main); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.info-content { background: #f8fafc; padding: 16px; border-radius: 12px; font-size: 0.9rem; line-height: 1.6; color: #475569; }
+.info-content ul { padding-left: 20px; margin-top: 8px; }
+.info-content li { margin-bottom: 6px; }
+.quote-block { font-style: italic; color: #64748b; border-left: 3px solid var(--primary-blue); padding-left: 12px; margin: 12px 0; background: #f8fbff; padding-top: 8px; padding-bottom: 8px; border-radius: 0 8px 8px 0; }

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>영포티 & 꼰대력 판별기</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+  <!-- ============ 시작 화면 ============ -->
+  <div id="startScreen" class="screen">
+    <div class="hero">
+      <h1>영포티 & 꼰대력<br>판별기</h1>
+      <p class="subtitle">어떤 판별을 받아보시겠어요?</p>
+      <span class="warning">⚠️ 재미로 보는 테스트입니다</span>
+    </div>
+
+    <div class="mode-list">
+      <button class="mode-card mode-young" onclick="startQuiz('young')">
+        <span class="mode-emoji">🧢</span>
+        <span class="mode-info">
+          <span class="mode-name">영포티 판별기</span>
+          <span class="mode-desc">젊은 감각과 트렌드 적응력 측정</span>
+        </span>
+        <span class="mode-arrow">›</span>
+      </button>
+
+      <button class="mode-card mode-kkoondae" onclick="startQuiz('kkoondae')">
+        <span class="mode-emoji">☕</span>
+        <span class="mode-info">
+          <span class="mode-name">꼰대력 판별기</span>
+          <span class="mode-desc">경험을 강요하는 태도 측정</span>
+        </span>
+        <span class="mode-arrow">›</span>
+      </button>
+
+      <button class="mode-card mode-both" onclick="startQuiz('both')">
+        <span class="mode-emoji">🎭</span>
+        <span class="mode-info">
+          <span class="mode-name">통합 판별기</span>
+          <span class="mode-desc">영포티 + 꼰대력 한 번에 측정</span>
+        </span>
+        <span class="mode-arrow">›</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============ 퀴즈 화면 ============ -->
+  <div id="quizScreen" class="screen hidden">
+    <div class="top-bar">
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+    <div class="q-counter" id="qCounter"></div>
+    <div class="question" id="questionText"></div>
+    <div class="answers" id="answersBox"></div>
+    <div class="bottom-btn-area">
+      <button class="btn" id="nextBtn" disabled onclick="nextQuestion()">다음</button>
+    </div>
+  </div>
+
+  <!-- ============ 결과 화면 ============ -->
+  <div id="resultScreen" class="screen hidden">
+    <h1 class="result-title" id="resultTitle"></h1>
+    <p class="result-type" id="resultType"></p>
+
+    <img src="" id="resultImage" class="character-img" alt="결과 캐릭터"
+         onerror="this.style.display='none'; document.getElementById('imgFallback').style.display='block';">
+    <div id="imgFallback" style="display:none; text-align:center; font-size:4rem; margin-bottom:20px;">👤</div>
+
+    <div class="score-card" id="youngCard">
+      <div class="score-head">
+        <span class="score-label">🧢 영포티일 확률</span>
+        <span class="score-value" id="youngScoreText">0%</span>
+      </div>
+      <div class="score-track"><div class="score-fill young-fill" id="youngBar"></div></div>
+    </div>
+
+    <div class="score-card" id="kkoondaeCard">
+      <div class="score-head">
+        <span class="score-label">☕ 꼰대력</span>
+        <span class="score-value" id="kkoondaeScoreText">0%</span>
+      </div>
+      <div class="score-track"><div class="score-fill kkoondae-fill" id="kkoondaeBar"></div></div>
+    </div>
+
+    <div class="desc-box" id="descBox"></div>
+
+    <div class="bottom-btn-area">
+      <button class="btn secondary" onclick="restart()">다시 하기</button>
+      <button class="btn" onclick="shareResult()">결과 공유하기</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- 자바스크립트 연결 -->
+<script src="app.js"></script>
+</body>
+</html>
