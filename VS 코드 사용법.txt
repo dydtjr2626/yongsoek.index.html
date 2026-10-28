@@ -8,3 +8,4 @@ VS 코드 사용법
 Ctrl shift P 를 눌러서 Publish branch 누르기
 
 github에 들어가서 전체공개로 돌리기
+- 빨간색 첫번째 누르기
