@@ -1,0 +1,17 @@
+코디세이 AI 대전
+링크인
+
+깃허브 프로젝트로 20명 넘는 사람들과 협업하며 문제를 해결해 나갔다.
+배경 
+확인 요청
+현재 확인 상태
+
+ASIDE AI - 홈피랑 홈피 연결하는 AI
+링커리어 - 캠페인 활동
+linkedin.com - 면접, 정보 들의 SNS 
+op.gg api
+discord bot developer
+flaticon - 아이콘, 스티커
+
+sass apocalypse - 일론 머스크가 말한 내용
+https://github.com/bookseal/paste-jd - 이기찬 강사님의 이력서, 자기소개서, 포트폴리오 생성기
