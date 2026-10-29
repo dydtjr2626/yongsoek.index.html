@@ -19,13 +19,11 @@
     </div>
 
     <div class="game-content">
-        <!-- 상태 바 -->
         <div class="status-bar" id="statusBar" style="display: none;">
             <div>🔥 콤보: <span class="combo" id="comboDisplay">0</span></div>
             <div>⭐ 점수: <span id="scoreDisplay">0</span></div>
         </div>
 
-        <!-- 진행률 및 타이머 -->
         <div class="progress-container" id="progressContainer" style="display: none;">
             <div class="bar-wrapper">
                 <div class="bar-text">
@@ -46,12 +44,11 @@
             </div>
         </div>
 
-        <!-- 단계 선택 화면 -->
         <div class="level-selection" id="levelSelection">
             <h1>영어 단어 학습 게임</h1>
             <p>난이도를 선택하세요</p>
             
-            <button class="level-btn easy" onclick="startGame('easy')">
+            <button class="level-btn easy" onclick="startGame()">
                 <svg class="level-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M50 80V50C50 50 30 50 20 30C10 10 40 10 50 30C60 10 90 10 80 30C70 50 50 50 50 50" stroke="#4CAF50" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#81C784"/>
                     <path d="M50 80V50" stroke="#2E7D32" stroke-width="8" stroke-linecap="round"/>
@@ -59,7 +56,7 @@
                 Easy (초급)
             </button>
             
-            <button class="level-btn normal" onclick="startGame('normal')">
+            <button class="level-btn normal" onclick="startGame()">
                 <svg class="level-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M50 90V50" stroke="#5D4037" stroke-width="6" stroke-linecap="round"/>
                     <path d="M50 60L30 40M50 70L70 50" stroke="#5D4037" stroke-width="4" stroke-linecap="round"/>
@@ -71,7 +68,7 @@
                 Normal (중급)
             </button>
             
-            <button class="level-btn hard" onclick="startGame('hard')">
+            <button class="level-btn hard" onclick="startGame()">
                 <svg class="level-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M40 90L45 60H55L60 90H40Z" fill="#795548"/>
                     <circle cx="50" cy="40" r="25" fill="#388E3C"/>
@@ -83,13 +80,11 @@
             </button>
         </div>
 
-        <!-- 게임 플레이 화면 -->
         <div class="play-area" id="playArea">
             <div class="word-display" id="wordDisplay">Word</div>
             <div class="options-grid" id="optionsGrid"></div>
         </div>
 
-        <!-- 결과 화면 -->
         <div class="result-area" id="resultArea">
             <h2 id="resultMessage">게임 종료!</h2>
             <div class="result-message-text" id="resultSubMessage"></div>
@@ -102,8 +97,7 @@
     </div>
 </div>
 
-<!-- 스크립트 연결 -->
-<script src="words.js"></script>
+<!-- script.js 하나만 불러옵니다. -->
 <script src="script.js"></script>
 </body>
 </html>
