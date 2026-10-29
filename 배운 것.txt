@@ -15,3 +15,7 @@ flaticon - 아이콘, 스티커
 
 sass apocalypse - 일론 머스크가 말한 내용
 https://github.com/bookseal/paste-jd - 이기찬 강사님의 이력서, 자기소개서, 포트폴리오 생성기
+
+램 컴퓨팅
+
+싱가폴 - 생체 모방 유기 전자 소자(Bio-organic electronics)' 또는 '식물-기계 인터페이스(Plant-machine interface)' 기술
